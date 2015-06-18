@@ -1,0 +1,19 @@
+# pack-refs with: peeled fully-peeled 
+b42d1944b8974d2511625de9f4495b3e2320b053 refs/remotes/origin/2.stable
+706bd5699cb10f735cf4632d5854c8a305e3137b refs/remotes/origin/3.stable
+20f5d34c056f5d8b3fc35b84b0e363dc1cb529d5 refs/remotes/origin/4.stable
+7c73270ad9b46939bad195edab7c727665d475b3 refs/remotes/origin/jd/methods-autoload
+a7db1dcfdc4828c740753e049def1199a823e64f refs/remotes/origin/master
+807a0ca7548fdc8ee9b0e47a629aedb982abe272 refs/remotes/origin/next
+f9331e83d2f28dd42bb8bf85fda97fd0aec2c015 refs/remotes/origin/refactoring
+a7cb91e2bfd8a7fe21c1e61abc34720d0eaa7626 refs/tags/1.0
+^ce18d60c4347d7dee217fd85cc9faa0d37d9f8a0
+b175af2081aaa3ae830545d4e506abf4b7b5accb refs/tags/1.1
+^0cf74cb21a02d5372c3b5928ede50b8c38287340
+dadf772ced96e25b8c287674685782429afdc8c4 refs/tags/2.1
+^c9b33627b74b4005b1430136368508b9dafa10d1
+87c1d900e5f97c34747814f0eb87a5032d2eaa23 refs/tags/2.2
+^da23a4c80f625b32e26ca575b8fc6957c0f89d38
+61504f3f8a78a870bf5f0c579660dd474994e01e refs/tags/3.1
+642ad1431521d1bc307354acd6e6e00544b74dcc refs/tags/4.1
+bfffd553f4c72b818e9ee94f05458eae7a16056b refs/tags/5.1

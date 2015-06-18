@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: test_script
+# key: ts
+# group : testing
+# --
+if __name__ == '__main__':
+    $0
