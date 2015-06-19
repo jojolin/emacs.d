@@ -49,6 +49,9 @@
 (hl-line-mode 1)  ; enable hl-line-mode
 (require 'init-evil)    ; add evil utility
 (require 'init-yasnippet)    ; add yasnippet support
+(require 'init-ag)    ; init ag support
+;; (require 'init-projectile)    ; may be later added
+;; (require 'init-w3m)    ; may be later added
 
 (require-package 'wgrep)
 (require-package 'project-local-variables)

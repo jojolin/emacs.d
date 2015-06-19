@@ -41,4 +41,4 @@ el-get/*/
 !el-get/el-get/
 .tutor/
 .travis.yml
-
+.python-environments/
