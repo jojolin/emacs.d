@@ -22,4 +22,10 @@
   (after-load 'dired
     (add-hook 'dired-mode-hook 'diff-hl-dired-mode)))
 
+;;; dired-details
+;; ref: http://www.emacswiki.org/emacs/dired-details.el
+(require-package 'dired-details)
+(require 'dired-details)
+(dired-details-install)
+
 (provide 'init-dired)

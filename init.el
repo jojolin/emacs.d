@@ -106,14 +106,14 @@
 
 (require 'init-paredit)
 (require 'init-lisp)
-;(require 'init-slime)
-;(when (>= emacs-major-version 24)
-;  (require 'init-clojure)
-;  (require 'init-clojure-cider))
-;(require 'init-common-lisp)
+;;(require 'init-slime)
+;;(when (>= emacs-major-version 24)
+;;  (require 'init-clojure)
+;;  (require 'init-clojure-cider))
+;;(require 'init-common-lisp)
 
-(when *spell-check-support-enabled*
-  (require 'init-spelling))
+;; (when *spell-check-support-enabled*
+;;   (require 'init-spelling))
 
 (require 'init-misc)
 
