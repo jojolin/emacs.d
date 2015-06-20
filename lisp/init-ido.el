@@ -24,7 +24,19 @@
 ;; http://www.reddit.com/r/emacs/comments/21a4p9/use_recentf_and_ido_together/cgbprem
 (add-hook 'ido-setup-hook (lambda () (define-key ido-completion-map [up] 'previous-history-element)))
 
+;;; fix-ido
+;; created: jojo
+;; ref: https://github.com/lewang/flx
+(require-package 'flx-ido)
+(require 'flx-ido)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
+;; or disabled highlights
+;; (setq flx-ido-use-faces nil)
 
-
+;; set threshold to avoid slow for large collections
+(setq flx-ido-threshold 10000)
 
 (provide 'init-ido)

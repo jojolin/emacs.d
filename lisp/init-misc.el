@@ -15,5 +15,8 @@
 
 (add-auto-mode 'conf-mode "Procfile")
 
+;; add hs-minor-mode
+(if (fboundp 'prog-mode) (add-hook 'prog-mode-hook 'hs-minor-mode))
+
 
 (provide 'init-misc)

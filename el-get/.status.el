@@ -10,6 +10,8 @@
          (:name cl-lib :builtin "24.3" :type elpa :description "Properly prefixed CL functions and macros" :url "http://elpa.gnu.org/packages/cl-lib.html"))
  (ctable status "installed" recipe
          (:name ctable :description "Table Component for elisp" :type github :pkgname "kiwanami/emacs-ctable"))
+ (dash status "installed" recipe
+       (:name dash :description "A modern list api for Emacs. No 'cl required." :type github :pkgname "magnars/dash.el"))
  (deferred status "installed" recipe
    (:name deferred :description "Simple asynchronous functions for emacs lisp." :type github :pkgname "kiwanami/emacs-deferred"))
  (ein status "installed" recipe
@@ -43,6 +45,12 @@
  (epc status "installed" recipe
       (:name epc :description "An RPC stack for Emacs Lisp" :type github :pkgname "kiwanami/emacs-epc" :depends
              (deferred ctable)))
+ (epl status "installed" recipe
+      (:name epl :description "EPL provides a convenient high-level API for various package.el versions, and aims to overcome its most striking idiocies." :type github :pkgname "cask/epl"))
+ (f status "installed" recipe
+    (:name f :website "https://github.com/rejeep/f.el" :description "Modern API for working with files and directories in Emacs" :depends
+           (s dash)
+           :type github :pkgname "rejeep/f.el"))
  (fuzzy status "installed" recipe
         (:name fuzzy :website "https://github.com/auto-complete/fuzzy-el" :description "Fuzzy matching utilities for GNU Emacs" :type github :pkgname "auto-complete/fuzzy-el"))
  (goto-chg status "installed" recipe
@@ -50,12 +58,18 @@
  (jedi status "installed" recipe
        (:name jedi :description "An awesome Python auto-completion for Emacs" :type github :pkgname "tkf/emacs-jedi" :submodule nil :depends
               (epc auto-complete python-environment)))
+ (pkg-info status "installed" recipe
+           (:name pkg-info :description "Provide information about Emacs packages." :type github :pkgname "lunaryorn/pkg-info.el" :depends
+                  (dash epl)))
  (popup status "installed" recipe
         (:name popup :website "https://github.com/auto-complete/popup-el" :description "Visual Popup Interface Library for Emacs" :type github :submodule nil :pkgname "auto-complete/popup-el"))
  (powerline status "installed" recipe
             (:name powerline :website "https://github.com/milkypostman/powerline" :depends
                    (cl-lib)
                    :description "Powerline for Emacs" :type github :pkgname "milkypostman/powerline" :load-path "." :features powerline))
+ (projectile status "installed" recipe
+             (:name projectile :description "Project navigation and management library for Emacs." :type github :pkgname "bbatsov/projectile" :depends
+                    (dash s f pkg-info)))
  (pylookup status "installed" recipe
            (:name pylookup :description "Emacs mode for searching python documents with convenience" :type github :pkgname "tsgates/pylookup" :prepare
                   (progn
@@ -71,6 +85,8 @@
  (request status "installed" recipe
           (:name request :description "Easy HTTP request for Emacs Lisp" :type github :submodule nil :pkgname "tkf/emacs-request" :depends
                  (deferred)))
+ (s status "installed" recipe
+    (:name s :description "The long lost Emacs string manipulation library." :type github :pkgname "magnars/s.el"))
  (undo-tree status "installed" recipe
             (:name undo-tree :description "Treat undo history as a tree" :website "http://www.dr-qubit.org/emacs.php" :type git :url "http://www.dr-qubit.org/git/undo-tree.git/"))
  (websocket status "installed" recipe

@@ -42,3 +42,7 @@ el-get/*/
 .tutor/
 .travis.yml
 .python-environments/
+# projectile cache
+*.cache
+# projectile bookmark file
+*.eld

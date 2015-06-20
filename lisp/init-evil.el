@@ -69,7 +69,7 @@
   "b" 'ido-switch-buffer
   "s" 'save-some-buffers
   "w" 'save-buffer
-  "k" 'kill-buffer
+  "x" 'kill-buffer
   ;; ace jump key
   "ac" 'evil-ace-jump-char-mode
   "al" 'evil-ace-jump-line-mode
@@ -127,6 +127,7 @@
 ;; maybe later added
 ;; (require-package 'evil-args)
 
+
 ;;; evil-escape
 ;; ref: https://github.com/syl20bnr/evil-escape
 ;; !!: cannot be used during macro recording, use regular ESC instead
@@ -137,6 +138,10 @@
 (setq-default evil-escape-delay 0.2)
 (evil-escape-mode 1)
 
+;;; evil-lisp-state
+(require-package 'evil-lisp-state)
+(require 'evil-lisp-state)
+
 ;;; evil-exchange
 ;; maybe later added
 ;; (require-package 'evil-exchange)
@@ -145,9 +150,6 @@
 ;; maybe later added
 ;; (require-package 'evil-jumper)
 
-;;; evil-lisp-state
-;;(require-package 'evil-lisp-state)
-;; may be later added
 
 ;;(require-package 'evil-org-mode)
 

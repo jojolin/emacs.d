@@ -20,8 +20,9 @@
   (define-key paredit-mode-map [remap backward-kill-sentence] nil)
 
   ;; Allow my global binding of M-? to work when paredit is active
-  (define-key paredit-mode-map (kbd "M-?") nil))
-
+  (define-key paredit-mode-map (kbd "M-?") nil)
+  ;; allow my global binding of M-; to commment  ##jojo
+  (define-key paredit-mode-map (kbd "M-;") nil))
 
 ;; Compatibility with other modes
 

@@ -87,5 +87,12 @@
 (require-package 'git-messenger)
 (global-set-key (kbd "C-x v p") #'git-messenger:popup-message)
 
+;; from *warning*
+;; Before running Git, Magit by default reverts all unmodified
+;; buffers that visit files tracked in the current repository.
+;; This can potentially lead to data loss, so you might want to
+;; disable this by adding the following line to your init file:
+(setq magit-auto-revert-mode nil)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 (provide 'init-git)

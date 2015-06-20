@@ -27,10 +27,11 @@
 ;;----------------------------------------------------------------------------
 (require 'init-loadpath)
 (require 'init-el-get)     ;; call el-get before package-initailize to avoid reloading
-
+(setq gc-cons-threshold 20000000)    ; set threshold to optimize speed
 ;; Calls (package-initialize)
 (require 'init-elpa)      ;; Machinery for installing required packages
 (require 'init-exec-path) ;; Set up $PATH
+;; end.
 
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-preload-local.el"
@@ -40,18 +41,6 @@
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
-
-;;----------------------------------------------------------------------------
-;; init el-get to get manage packages
-;; created by: jojo
-;;----------------------------------------------------------------------------
-(paredit-mode nil)    ; disabled paredit-mode for it always disturb me
-(hl-line-mode 1)  ; enable hl-line-mode
-(require 'init-evil)    ; add evil utility
-(require 'init-yasnippet)    ; add yasnippet support
-(require 'init-ag)    ; init ag support
-;; (require 'init-projectile)    ; may be later added
-;; (require 'init-w3m)    ; may be later added
 
 (require-package 'wgrep)
 (require-package 'project-local-variables)
@@ -131,6 +120,18 @@
 (when *is-a-mac*
   (require-package 'osx-location))
 (require-package 'regex-tool)
+
+;;----------------------------------------------------------------------------
+;; init el-get to get manage packages
+;; created by: jojo
+;;----------------------------------------------------------------------------
+(hl-line-mode 1)  ; enable hl-line-mode
+(require 'init-evil)    ; add evil utility
+(require 'init-yasnippet)    ; add yasnippet support
+(require 'init-ag)    ; init ag support
+(require 'init-projectile)
+;; (require 'init-w3m)    ; may be later added
+;; end.
 
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
