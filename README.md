@@ -36,3 +36,13 @@ This config is based on purcell's config.
 5. misc.
    + Add more ram for emacs : (setq gc-cons-threshold 20000000)
    + *Detailed in .emacs.d/init.el.*
+
+## links ##
+
+[prucell's emacs.d](https://github.com/purcell/emacs.d)
+
+some config about evil comes from redguadrtoo.
+[redguardtoo/emacs.d](https://github.com/redguardtoo/emacs.d )
+
+
+
