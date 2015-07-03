@@ -8,6 +8,29 @@
 
 (require-package 'pip-requirements)
 
+;;; ipython
+;; ref: the ipython.el file in your installed file
+;; (require-package 'python)
+;; (require 'python)
+(require-package 'python-mode)
+;; (require-package 'ipython)
+;; (require 'ipython)
+;; (setq
+;;  python-shell-interpreter "ipython"
+;;  python-shell-interpreter-args ""
+;;  python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+;;  python-shell-prompt-output-regexp "Out \\[[0-9]+\\]: "
+;;  python-shell-completion-setup-code
+;;  "from IPython.core.completerlib import module_completion"
+;;  python-shell-completion-module-string-code
+;;  "';'.join(module_completion('''%s'''))\n"
+;;  python-shell-completion-string-code
+;;  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
+
+;; To start an interactive ipython session run `py-shell' with ``M-x py-shell``
+;; to start always in ``pylab`` mode with hardcoded light-background colors, use::
+;; (setq py-python-command-args '("-pylab" "-colors" "LightBG"))
+
 ;;; jedi
 ;; ref: http://tkf.github.io/emacs-jedi/released/#manual-install
 (el-get-install 'jedi)
@@ -65,6 +88,7 @@
 ;; key
 (global-set-key (kbd "C-c h") 'pylookup-lookup)
 
+
 ;;; EIN: emacs ipython notebook
 ;; ref: https://github.com/millejoh/emacs-ipython-notebook
 ;; manual: http://tkf.github.io/emacs-ipython-notebook/
@@ -88,6 +112,16 @@
   (dolist (line python/highlight-lines)
     (highlight-lines-matching-regexp line)))
 (add-hook 'python-mode-hook 'hl-debug)
+
+;; help for eval python buffer
+(eval-after-load 'python
+  `(progn
+     (defun python-shell-eval-current-line ()
+       "Eval current line."
+       (interactive)
+       (python-shell-send-region (line-beginning-position) (line-end-position)))
+     (define-key python-mode-map (kbd "C-c C-l") nil)
+     (define-key python-mode-map (kbd "C-c C-l") 'python-shell-eval-current-line)))
 
 (provide 'init-python-mode)
 ;;; init-python-mode ends here
