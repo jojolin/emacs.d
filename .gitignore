@@ -46,3 +46,4 @@ el-get/*/
 *.cache
 # projectile bookmark file
 *.eld
+abbrev_defs

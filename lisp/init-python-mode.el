@@ -70,6 +70,8 @@
 ;;; pylookup
 ;; ref: https://github.com/tsgates/pylookup
 ;; usage: ./pylookup.py -u [python-2.7.1-docs-html]
+;; the original python doc
+;; file:///usr/share/doc/python2.7-doc/html/index.html
 (el-get-install 'pylookup)
 ;; add pylookup to your loadpath, ex) ~/.emacs.d/el-get/pylookup
 (setq pylookup-dir "~/.emacs.d/el-get/pylookup")
@@ -87,7 +89,6 @@
   "Run pylookup-update and create the database at `pylookup-db-file'." t)
 ;; key
 (global-set-key (kbd "C-c h") 'pylookup-lookup)
-
 
 ;;; EIN: emacs ipython notebook
 ;; ref: https://github.com/millejoh/emacs-ipython-notebook

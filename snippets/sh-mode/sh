@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: sh
+# key: sh
+# --
+#!/bin/sh
+# created by: jojo
+# ${1:`(file-name-nondirectory (buffer-file-name))`} : $2
+$0

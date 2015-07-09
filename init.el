@@ -126,11 +126,11 @@
 ;; created by: jojo
 ;;----------------------------------------------------------------------------
 (hl-line-mode 1)  ; enable hl-line-mode
+(require 'init-w3m)
 (require 'init-evil)    ; add evil utility
 (require 'init-yasnippet)    ; add yasnippet support
 (require 'init-ag)    ; init ag support
 (require 'init-projectile)
-;; (require 'init-w3m)    ; may be later added
 ;; end.
 
 ;;----------------------------------------------------------------------------
@@ -176,3 +176,4 @@
 ;; coding: utf-8
 ;; no-byte-compile: t
 ;; End:
+(put 'set-goal-column 'disabled nil)

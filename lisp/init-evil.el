@@ -67,6 +67,7 @@
 (evil-leader/set-key
   "f" 'find-file
   "b" 'ido-switch-buffer
+  "d" 'ido-dired
   "s" 'save-some-buffers
   "w" 'save-buffer
   "x" 'kill-buffer
